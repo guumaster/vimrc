@@ -81,4 +81,7 @@
 	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/vundle"]
 	path = bundle/vundle
-	url  = https://github.com/gmarik/vundle.git
+    url  = https://github.com/gmarik/vundle.git
+[submodule "bundle/neocomplcache"]
+    path = bundle/neocomplcache
+    url = https://github.com/Shougo/neocomplcache.git
