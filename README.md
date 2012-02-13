@@ -1,6 +1,5 @@
 # Installation
-Clone the repo: 
-    git clone https://github.com/scrooloose/vimfiles.git ~/.vim
+Clone the repo: <code>git clone https://github.com/scrooloose/vimfiles.git ~/.vim</code>
 
 Grab the plugin submodules: 
     cd ~/.vim && git submodule init && git submodule update
