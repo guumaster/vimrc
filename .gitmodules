@@ -74,20 +74,17 @@
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
+    path = bundle/vim-coffee-script
+    url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/unimpaired"]
-	path = bundle/unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
+    path = bundle/unimpaired
+    url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/vundle"]
-	path = bundle/vundle
+    path = bundle/vundle
     url  = https://github.com/gmarik/vundle.git
 [submodule "bundle/neocomplcache"]
     path = bundle/neocomplcache
     url = https://github.com/Shougo/neocomplcache.git
-[submodule "bundle/snipmate-snippets"]
-    path = bundle/snipmate-snippets
-    url = https://github.com/scrooloose/snipmate-snippets.git
 [submodule "bundle/supertab"]
     path = bundle/supertab
     url = https://github.com/ervandew/supertab.git
@@ -106,4 +103,3 @@
 [submodule "bundle/vim-surround"]
     path = bundle/vim-surround
     url = https://github.com/tpope/vim-surround.git 
-
