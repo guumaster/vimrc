@@ -2,30 +2,9 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-    Bundle 'tpope/vim-surround'
-    Bundle 'ervandew/supertab'
-    Bundle 'wincent/Command-T'
-    Bundle 'garbas/vim-snipmate'
-    Bundle 'spf13/snipmate-snippets'
-    Bundle 'Shougo/neocomplcache'
-    Bundle 'MarcWeber/vim-addon-mw-utils'
-    Bundle 'tomtom/tlib_vim'
-    Bundle 'majutsushi/tagbar'
-filetype plugin indent on "
-
 "activate pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -36,12 +15,11 @@ set history=1000
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
-set number      "show line numbers
+"set number      "show line numbers
 
 "display tabs and trailing spaces
 set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
 
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
@@ -54,7 +32,7 @@ if v:version >= 703
     set undodir=~/.vim/undofiles
     set undofile
 
-    "set colorcolumn=+1 "mark the ideal max text width
+    set colorcolumn=+1 "mark the ideal max text width
 endif
 
 "default indent settings
@@ -97,7 +75,9 @@ set t_Co=256
 set hidden
 
 "statusline setup
-set statusline=%f       "tail of the filename
+set statusline =%#identifier#
+set statusline+=[%t]    "tail of the filename
+set statusline+=%*
 
 "display a warning if fileformat isnt unix
 set statusline+=%#warningmsg#
@@ -111,10 +91,18 @@ set statusline+=%*
 
 set statusline+=%h      "help file flag
 set statusline+=%y      "filetype
-set statusline+=%r      "read only flag
-set statusline+=%m      "modified flag
 
-set statusline+=%{fugitive#statusline()}
+"read only flag
+set statusline+=%#identifier#
+set statusline+=%r
+set statusline+=%*
+
+"modified flag
+set statusline+=%#identifier#
+set statusline+=%m
+set statusline+=%*
+
+"set statusline+=%{fugitive#statusline()}
 
 "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
@@ -126,7 +114,7 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 set statusline+=%{StatuslineLongLineWarning()}
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "display a warning if &paste is set
@@ -236,21 +224,10 @@ endfunction
 
 "return a list containing the lengths of the long lines in this buffer
 function! s:LongLines()
-    let threshold = (&tw ? &tw : 120)
+    let threshold = (&tw ? &tw : 80)
     let spaces = repeat(" ", &ts)
-
-    let long_line_lens = []
-
-    let i = 1
-    while i <= line("$")
-        let len = strlen(substitute(getline(i), '\t', spaces, 'g'))
-        if len > threshold
-            call add(long_line_lens, len)
-        endif
-        let i += 1
-    endwhile
-
-    return long_line_lens
+    let line_lens = map(getline(1,'$'), 'len(substitute(v:val, "\\t", spaces, "g"))')
+    return filter(line_lens, 'v:val > threshold')
 endfunction
 
 "find the median of the given array of numbers
@@ -266,35 +243,14 @@ function! s:Median(nums)
     endif
 endfunction
 
-"syntastic settings
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-
-"snipmate settings
-let g:snips_author = "Martin Grenfell"
-
-"taglist settings
-let Tlist_Compact_Format = 1
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Exit_OnlyWindow = 0
-let Tlist_WinWidth = 35
-let tlist_php_settings = 'php;c:class;f:Functions'
-let Tlist_Use_Right_Window=1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Display_Tag_Scope = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Show_One_File = 1
-
 "nerdtree settings
-let g:NERDTreeShowBookmarks=1
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr','node_modules']
-let NERDTreeCaseSensitiveSort = 1
+
 "explorer mappings
 nnoremap <f1> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
-nnoremap <f3> :TlistToggle<cr>
+nnoremap <f3> :TagbarToggle<cr>
 
 "source project specific config files
 runtime! projects/**/*.vim
@@ -351,84 +307,3 @@ autocmd BufReadPost fugitive://*
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
-" OmniComplete {
-if has("autocmd") && exists("+omnifunc")
-    autocmd Filetype *
-                \if &omnifunc == " |
-                \setlocal omnifunc=syntaxcomplete#Complete |
-                \endif
-endif
-let g:SuperTabCrMapping = 0
-
-hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
-hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
-hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent!pclose|endif
-set completeopt=menu,preview,longest
-"}
-
-" neocomplcache {
-        let g:neocomplcache_enable_at_startup = 1
-        let g:neocomplcache_enable_camel_case_completion = 1
-        let g:neocomplcache_enable_smart_case = 1
-        let g:neocomplcache_enable_underbar_completion = 1
-        let g:neocomplcache_min_syntax_length = 3
-        let g:neocomplcache_enable_auto_delimiter = 1
-
-        " AutoComplPop like behavior.
-        let g:neocomplcache_enable_auto_select = 3
-
-        " SuperTab like snippets behavior.
-        imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
-        " Plugin key-mappings.
-        imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-        smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-        inoremap <expr><C-g>     neocomplcache#undo_completion()
-        inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-        " Recommended key-mappings.
-        " <TAB>: completion.
-        inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-        " <C-h>, <BS>: close popup and delete backword char.
-        inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-        inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-
-        " Enable omni completion.
-        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-        " Enable heavy omni completion.
-        if !exists('g:neocomplcache_omni_patterns')
-            let g:neocomplcache_omni_patterns = {}
-        endif
-        let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-        "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-        let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-        let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-        let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-        " For snippet_complete marker.
-        if has('conceal')
-            set conceallevel=2 concealcursor=i
-        endif
-
-     " }
-
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-K> <C-W>k<C-W>_
-
-map <S-H> gT
-map <S-L> gt
-
-map <D-r> :w<CR>
-
-set tags=./tags;/,~/.vimtags
-let g:easytags_cmd = 'ctags'
