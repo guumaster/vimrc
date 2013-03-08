@@ -166,3 +166,12 @@
 [submodule "bundle/php.vim-for-php5"]
 	path = bundle/php.vim-for-php5
 	url = git://github.com/vim-scripts/php.vim-for-php5.git
+[submodule "bundle/Symfony"]
+	path = bundle/Symfony
+	url = git://github.com/vim-scripts/Symfony.git
+[submodule "bundle/symfony.vim"]
+	path = bundle/symfony.vim
+	url = git://github.com/vim-scripts/symfony.vim.git
+[submodule "bundle/ZenCoding.vim"]
+	path = bundle/ZenCoding.vim
+	url = git://github.com/vim-scripts/ZenCoding.vim.git
