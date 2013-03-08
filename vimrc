@@ -152,7 +152,7 @@ set statusline+=%#identifier#
 set statusline+=%m
 set statusline+=%*
 
-"set statusline+=%{fugitive#statusline()}
+set statusline+=%{fugitive#statusline()}
 
 "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
