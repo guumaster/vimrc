@@ -1,6 +1,21 @@
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 
+if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+   set fileencodings=utf-8,latin1
+endif
+set nohlsearch
+set expandtab
+"set noexpandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set showmatch
+set showcmd
+set wildmode=longest,list
+"set wildmode=list,full
+set wildignore=*.swp,.#*,*.o,*.core,*~,core,#*#,*.gif,*.jpg,*.png,*.db,*.zip,*.tgz
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -99,8 +114,8 @@ filetype indent on
 syntax on
 
 "some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
+"set mouse=a
+"set ttymouse=xterm2
 
 "tell the term has 256 colors
 set t_Co=256
