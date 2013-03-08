@@ -127,9 +127,6 @@
 [submodule "vim-fugitive"]
 	path = vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/javascript.vim"]
-	path = bundle/javascript.vim
-	url = git://github.com/vim-scripts/javascript.vim
 [submodule "bundle/surround.vim"]
 	path = bundle/surround.vim
 	url = https://github.com/tpope/vim-surround
