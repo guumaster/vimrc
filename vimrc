@@ -5,16 +5,18 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
 endif
 set nohlsearch
-set expandtab
+"set expandtab
 "set noexpandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set showmatch
 set showcmd
-set wildmode=longest,list
+set wildmode=longest:list
 "set wildmode=list,full
 set wildignore=*.swp,.#*,*.o,*.core,*~,core,#*#,*.gif,*.jpg,*.png,*.db,*.zip,*.tgz
+"
+set autoindent
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -67,7 +69,7 @@ set showmode    "show current mode down the bottom
 "set number      "show line numbers
 
 "display tabs and trailing spaces
-set list
+"set list
 "set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 "set listchars=tab:..,trail:.,nbsp:.
 
@@ -85,18 +87,13 @@ if v:version >= 703
 "    set colorcolumn=+1 "mark the ideal max text width
 endif
 
-"default indent settings
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set autoindent
 
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
-set wildmode=list:longest   "make cmdline tab completion similar to bash
+"set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
