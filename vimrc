@@ -4,6 +4,8 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+colorscheme symfony
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -27,6 +29,9 @@ Bundle 'Syntastic'
 Bundle 'The-NERD-Commenter'
 Bundle 'zencoding-vim'
 Bundle 'vim-pathogen'
+Bundle 'Symfony'
+Bundle 'symfony.vim'
+Bundle 'ZenCoding.vim'
 
 
 
