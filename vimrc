@@ -1,6 +1,35 @@
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
-set nocompatible
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'JSON.vim'
+Bundle 'apachelogs.vim'
+Bundle 'cleanphp'
+Bundle 'fugitive'
+Bundle 'jsbeautify'
+Bundle 'javascript.vim'
+Bundle 'jshint.vim'
+Bundle 'jslint.vim'
+Bundle 'node.js'
+Bundle 'php.vim'
+Bundle 'php.vim-for-php5'
+Bundle 'vim-surround'
+Bundle 'todo.vim'
+Bundle 'Syntastic'
+Bundle 'The-NERD-Commenter'
+Bundle 'zencoding-vim'
+Bundle 'vim-pathogen'
+
+
+
 
 "activate pathogen
 "call pathogen#infect()
