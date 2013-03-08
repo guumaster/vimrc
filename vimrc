@@ -10,7 +10,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'JSON.vim'
 Bundle 'apachelogs.vim'
@@ -66,7 +66,7 @@ if v:version >= 703
     set undodir=~/.vim/undofiles
     set undofile
 
-    set colorcolumn=+1 "mark the ideal max text width
+"    set colorcolumn=+1 "mark the ideal max text width
 endif
 
 "default indent settings
