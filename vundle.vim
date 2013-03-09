@@ -34,5 +34,4 @@ Bundle 'vim-pathogen'
 Bundle 'Symfony'
 Bundle 'symfony.vim'
 Bundle 'ZenCoding.vim'
-
-
+Bundle 'airblade/vim-gitgutter'
