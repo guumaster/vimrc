@@ -175,3 +175,10 @@
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/htmljinja.vim"]
+	path = bundle/htmljinja.vim
+	url = https://github.com/ocim/htmljinja.vim.git
+[submodule "bundle/Jinja"]
+	path = bundle/Jinja
+	url = https://github.com/vim-scripts/Jinja.git
+

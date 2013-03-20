@@ -147,5 +147,8 @@ if has("autocmd")
           return (nums[l/2] + nums[(l/2)-1]) / 2
       endif
   endfunction
+
+ " au BufNewFile,BufRead *.twig set filetype=html
+  au BufNewFile,BufRead *.twig set filetype=jinja
   
 endif
