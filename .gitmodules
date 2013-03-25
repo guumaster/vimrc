@@ -182,3 +182,6 @@
 	path = bundle/Jinja
 	url = https://github.com/vim-scripts/Jinja.git
 
+[submodule "bundle/php-cs-fixer"]
+	path = bundle/php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
