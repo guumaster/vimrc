@@ -76,7 +76,7 @@ set history=1000       " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 "set autowrite          " Writes on make/shell commands
-set timeoutlen=450     " Time to wait for a command (after leader for example).
+set timeoutlen=2000     " Time to wait for a command (after leader for example).
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 "set formatoptions=crql
@@ -160,3 +160,14 @@ set complete=.,w,b,u,U
 
 "tell the term has 256 colors
 set t_Co=256
+
+
+let g:php_cs_fixer_path = "~/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_level = "all"                " which level ?
+let g:php_cs_fixer_config = "default"           " configuration
+let g:php_cs_fixer_php_path = "php"             " Path to PHP
+let g:php_cs_fixer_fixers_list = ""             " List of fixers
+let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
+let g:php_cs_fixer_verbose = 1                  " Return the output of command if 1, else an inline information.
+
