@@ -1,3 +1,4 @@
 undofiles
 .backup
 .tmp
+bundle/*/doc/tags
