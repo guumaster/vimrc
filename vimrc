@@ -26,7 +26,12 @@ set nofoldenable        "dont fold by default
 
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
-let g:NERDTreeWinSize = 40
+let g:NERDTreeWinSize = 45
+" ack bundle
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" snipmate bundle
+let g:snips_author = 'Gustavo Marin'
+"let g:snippets_dir="~/.vim/bundle/snipmate-snippets/snippets/"
 
 " ---------------
 " Bindings
