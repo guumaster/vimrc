@@ -1,190 +1,260 @@
 [submodule "bundle/git-runtime"]
     path = bundle/git-runtime
     url = https://github.com/tpope/vim-git.git
+    ignore = all
 [submodule "bundle/endwise"]
     path = bundle/endwise
     url = https://github.com/tpope/vim-endwise.git
+    ignore = all
 [submodule "bundle/surround"]
     path = bundle/surround
     url = https://github.com/tpope/vim-surround.git
+    ignore = all
 [submodule "bundle/ragtag"]
     path = bundle/ragtag
     url = https://github.com/tpope/vim-ragtag.git
+    ignore = all
 [submodule "bundle/nerdtree"]
     path = bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
+    ignore = all
 [submodule "bundle/nerdcommenter"]
     path = bundle/nerdcommenter
     url = https://github.com/scrooloose/nerdcommenter.git
+    ignore = all
 [submodule "bundle/syntastic"]
     path = bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
+    ignore = all
 [submodule "bundle/csapprox"]
     path = bundle/csapprox
     url = https://github.com/godlygeek/csapprox.git
+    ignore = all
 [submodule "bundle/snipmate"]
     path = bundle/snipmate
     url = https://github.com/msanders/snipmate.vim.git
+    ignore = all
 [submodule "bundle/bufexplorer"]
     path = bundle/bufexplorer
     url = https://github.com/vim-scripts/bufexplorer.zip.git
+    ignore = all
 [submodule "bundle/a"]
     path = bundle/a
     url = https://github.com/vim-scripts/a.vim.git
+    ignore = all
 [submodule "bundle/taglist"]
     path = bundle/taglist
     url = https://github.com/vim-scripts/taglist.vim.git
+    ignore = all
 [submodule "bundle/indexed-search"]
     path = bundle/indexed-search
     url = https://github.com/vim-scripts/IndexedSearch.git
+    ignore = all
 [submodule "bundle/delimitMate"]
     path = bundle/delimitMate
     url = https://github.com/vim-scripts/delimitMate.vim.git
+    ignore = all
 [submodule "bundle/matchit"]
     path = bundle/matchit
     url = https://github.com/vim-scripts/matchit.zip.git
+    ignore = all
 [submodule "bundle/markdown-runtime"]
     path = bundle/markdown-runtime
     url = https://github.com/tpope/vim-markdown.git
+    ignore = all
 [submodule "bundle/gundo"]
     path = bundle/gundo
     url = https://github.com/sjl/gundo.vim.git
+    ignore = all
 [submodule "bundle/solarized"]
     path = bundle/solarized
     url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = all
 [submodule "bundle/command-t"]
     path = bundle/command-t
-    url = https://github.com/wincent/Command-T.git
+    url = git://git.wincent.com/command-t.git
+    ignore = all
 [submodule "bundle/fugitive"]
     path = bundle/fugitive
     url = https://github.com/tpope/vim-fugitive.git
+    ignore = all
 [submodule "bundle/repeat"]
     path = bundle/repeat
     url = https://github.com/tpope/vim-repeat.git
+    ignore = all
 [submodule "bundle/ack"]
     path = bundle/ack
     url = https://github.com/mileszs/ack.vim.git
+    ignore = all
 [submodule "bundle/tabular"]
     path = bundle/tabular
     url = https://github.com/godlygeek/tabular.git
+    ignore = all
 [submodule "bundle/vim-coffee-script"]
     path = bundle/vim-coffee-script
     url = https://github.com/kchmck/vim-coffee-script.git
+    ignore = all
 [submodule "bundle/unimpaired"]
     path = bundle/unimpaired
     url = https://github.com/tpope/vim-unimpaired.git
+    ignore = all
 [submodule "bundle/vundle"]
     path = bundle/vundle
     url  = https://github.com/gmarik/vundle.git
+    ignore = all
 [submodule "bundle/neocomplcache"]
     path = bundle/neocomplcache
     url = https://github.com/Shougo/neocomplcache.git
+    ignore = all
 [submodule "bundle/supertab"]
     path = bundle/supertab
     url = https://github.com/ervandew/supertab.git
+    ignore = all
 [submodule "bundle/tagbar"]
     path = bundle/tagbar
     url = https://github.com/majutsushi/tagbar.git
+    ignore = all
 [submodule "bundle/tlib_vim"]
     path = bundle/tlib_vim
     url = https://github.com/tomtom/tlib_vim.git
+    ignore = all
 [submodule "bundle/vim-addon-mw-utils"]
     path = bundle/vim-addon-mw-utils
     url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+    ignore = all
 [submodule "bundle/vim-snipmate"]
     path = bundle/vim-snipmate
-    url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+    url = git://github.com/garbas/vim-snipmate.git
+    ignore = all
 [submodule "bundle/vim-surround"]
     path = bundle/vim-surround
     url = https://github.com/tpope/vim-surround.git
-[submodule "todo.vim"]
-    path = todo.vim
-    url = https://github.com/vim-scripts/todo.vim
+    ignore = all
 [submodule "phpcomplete.vim"]
     path = phpcomplete.vim
     url = git://github.com/shawncplus/phpcomplete.vim.git
+    ignore = all
 [submodule "zencoding-vim"]
     path = zencoding-vim
     url = git://github.com/mattn/zencoding-vim.git
+    ignore = all
 [submodule "bundle/zencoding"]
-	path = bundle/zencoding
-	url = git://github.com/mattn/zencoding-vim.git
+    path = bundle/zencoding
+    url = git://github.com/mattn/zencoding-vim.git
+    ignore = all
 [submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
+    path = bundle/zencoding-vim
+    url = git://github.com/mattn/zencoding-vim.git
+    ignore = all
 [submodule "bundle/todo.vim"]
-	path = bundle/todo.vim
-	url = https://github.com/vim-scripts/todo.vim
+    path = bundle/todo.vim
+    url = https://github.com/vim-scripts/todo.vim
+    ignore = all
 [submodule "bundle/phpcomplete.vim"]
-	path = bundle/phpcomplete.vim
-	url = git://github.com/shawncplus/phpcomplete.vim.git
+    path = bundle/phpcomplete.vim
+    url = git://github.com/shawncplus/phpcomplete.vim.git
+    ignore = all
 [submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = git://github.com/tpope/vim-pathogen
+    path = bundle/vim-pathogen
+    url = git://github.com/tpope/vim-pathogen
+    ignore = all
 [submodule "bundle/vim-sensible"]
-	path = bundle/vim-sensible
-	url = git://github.com/tpope/vim-sensible.git
+    path = bundle/vim-sensible
+    url = git://github.com/tpope/vim-sensible.git
+    ignore = all
 [submodule "vim-fugitive"]
-	path = vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+    path = vim-fugitive
+    url = git://github.com/tpope/vim-fugitive.git
+    ignore = all
 [submodule "bundle/surround.vim"]
-	path = bundle/surround.vim
-	url = https://github.com/tpope/vim-surround
+    path = bundle/surround.vim
+    url = https://github.com/tpope/vim-surround
+    ignore = all
 [submodule "bundle/JSON.vim"]
-	path = bundle/JSON.vim
-	url = git://github.com/vim-scripts/JSON.vim.git
+    path = bundle/JSON.vim
+    url = git://github.com/vim-scripts/JSON.vim.git
+    ignore = all
 [submodule "bundle/php.vim"]
-	path = bundle/php.vim
-	url = git://github.com/vim-scripts/php.vim.git
+    path = bundle/php.vim
+    url = git://github.com/vim-scripts/php.vim.git
+    ignore = all
 [submodule "bundle/Syntastic"]
-	path = bundle/Syntastic
-	url = git://github.com/vim-scripts/Syntastic.git
+    path = bundle/Syntastic
+    url = git://github.com/vim-scripts/Syntastic.git
+    ignore = all
 [submodule "bundle/The-NERD-Commenter"]
-	path = bundle/The-NERD-Commenter
-	url = git://github.com/vim-scripts/The-NERD-Commenter.git
+    path = bundle/The-NERD-Commenter
+    url = git://github.com/vim-scripts/The-NERD-Commenter.git
+    ignore = all
 [submodule "bundle/apachelogs.vim"]
-	path = bundle/apachelogs.vim
-	url = git://github.com/vim-scripts/apachelogs.vim.git
+    path = bundle/apachelogs.vim
+    url = git://github.com/vim-scripts/apachelogs.vim.git
+    ignore = all
 [submodule "bundle/cleanphp"]
-	path = bundle/cleanphp
-	url = git://github.com/vim-scripts/cleanphp.git
+    path = bundle/cleanphp
+    url = git://github.com/vim-scripts/cleanphp.git
+    ignore = all
 [submodule "bundle/jsbeautify"]
-	path = bundle/jsbeautify
-	url = git://github.com/vim-scripts/jsbeautify.git
+    path = bundle/jsbeautify
+    url = git://github.com/vim-scripts/jsbeautify.git
+    ignore = all
 [submodule "bundle/jslint.vim"]
-	path = bundle/jslint.vim
-	url = git://github.com/vim-scripts/jslint.vim.git
+    path = bundle/jslint.vim
+    url = git://github.com/vim-scripts/jslint.vim.git
+    ignore = all
 [submodule "bundle/jshint.vim"]
-	path = bundle/jshint.vim
-	url = git://github.com/vim-scripts/jshint.vim.git
+    path = bundle/jshint.vim
+    url = git://github.com/vim-scripts/jshint.vim.git
+    ignore = all
 [submodule "bundle/node.js"]
-	path = bundle/node.js
-	url = git://github.com/vim-scripts/node.js.git
+    path = bundle/node.js
+    url = git://github.com/vim-scripts/node.js.git
+    ignore = all
 [submodule "bundle/php.vim-for-php5"]
-	path = bundle/php.vim-for-php5
-	url = git://github.com/vim-scripts/php.vim-for-php5.git
+    path = bundle/php.vim-for-php5
+    url = git://github.com/vim-scripts/php.vim-for-php5.git
+    ignore = all
 [submodule "bundle/Symfony"]
-	path = bundle/Symfony
-	url = git://github.com/vim-scripts/Symfony.git
+    path = bundle/Symfony
+    url = git://github.com/vim-scripts/Symfony.git
+    ignore = all
 [submodule "bundle/symfony.vim"]
-	path = bundle/symfony.vim
-	url = git://github.com/vim-scripts/symfony.vim.git
+    path = bundle/symfony.vim
+    url = git://github.com/vim-scripts/symfony.vim.git
+    ignore = all
 [submodule "bundle/ZenCoding.vim"]
-	path = bundle/ZenCoding.vim
-	url = git://github.com/vim-scripts/ZenCoding.vim.git
+    path = bundle/ZenCoding.vim
+    url = git://github.com/vim-scripts/ZenCoding.vim.git
+    ignore = all
 [submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
+    path = bundle/vim-gitgutter
+    url = https://github.com/airblade/vim-gitgutter.git
+    ignore = all
 [submodule "bundle/htmljinja.vim"]
-	path = bundle/htmljinja.vim
-	url = https://github.com/ocim/htmljinja.vim.git
+    path = bundle/htmljinja.vim
+    url = https://github.com/ocim/htmljinja.vim.git
+    ignore = all
 [submodule "bundle/Jinja"]
-	path = bundle/Jinja
-	url = https://github.com/vim-scripts/Jinja.git
-
+    path = bundle/Jinja
+    url = https://github.com/vim-scripts/Jinja.git
+    ignore = all
+[submodule "bundle/ack.vim"]
+    path = bundle/ack.vim
+    url = https://github.com/tyok/ack.vim
+    ignore = all
+[submodule "bundle/snipmate-snippets"]
+    path = bundle/snipmate-snippets
+    url = https://github.com/honza/snipmate-snippets
+    ignore = all
+[submodule "bundle/vim-xdebug"]
+    path = bundle/vim-xdebug
+    url = https://github.com/ludovicPelle/vim-xdebug
+    ignore = all
 [submodule "bundle/php-cs-fixer"]
-	path = bundle/php-cs-fixer
-	url = https://github.com/stephpy/vim-php-cs-fixer.git
+    path = bundle/php-cs-fixer
+    url = https://github.com/stephpy/vim-php-cs-fixer.git
+    ignore = all
 [submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+    path = bundle/vim-markdown
+    url = https://github.com/plasticboy/vim-markdown.git
+    ignore = all

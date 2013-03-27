@@ -152,7 +152,7 @@ set t_vb=
 " Mouse
 " ---------------
 set mousehide  " Hide mouse after chars typed
-"set mouse=a    " Mouse in all modes
+set mouse=a    " Mouse in all modes
 "set ttymouse=xterm2
 
 " Better complete options to speed it up
