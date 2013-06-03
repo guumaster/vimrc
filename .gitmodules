@@ -70,10 +70,6 @@
     path = bundle/solarized
     url = https://github.com/altercation/vim-colors-solarized.git
     ignore = all
-[submodule "bundle/command-t"]
-    path = bundle/command-t
-    url = git://git.wincent.com/command-t.git
-    ignore = all
 [submodule "bundle/fugitive"]
     path = bundle/fugitive
     url = https://github.com/tpope/vim-fugitive.git
@@ -230,10 +226,6 @@
     path = bundle/vim-gitgutter
     url = https://github.com/airblade/vim-gitgutter.git
     ignore = all
-[submodule "bundle/htmljinja.vim"]
-    path = bundle/htmljinja.vim
-    url = https://github.com/ocim/htmljinja.vim.git
-    ignore = all
 [submodule "bundle/Jinja"]
     path = bundle/Jinja
     url = https://github.com/vim-scripts/Jinja.git
@@ -245,10 +237,6 @@
 [submodule "bundle/snipmate-snippets"]
     path = bundle/snipmate-snippets
     url = https://github.com/honza/snipmate-snippets
-    ignore = all
-[submodule "bundle/vim-xdebug"]
-    path = bundle/vim-xdebug
-    url = https://github.com/ludovicPelle/vim-xdebug
     ignore = all
 [submodule "bundle/php-cs-fixer"]
     path = bundle/php-cs-fixer
