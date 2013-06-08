@@ -30,10 +30,6 @@
     path = bundle/csapprox
     url = https://github.com/godlygeek/csapprox.git
     ignore = all
-[submodule "bundle/snipmate"]
-    path = bundle/snipmate
-    url = https://github.com/msanders/snipmate.vim.git
-    ignore = all
 [submodule "bundle/bufexplorer"]
     path = bundle/bufexplorer
     url = https://github.com/vim-scripts/bufexplorer.zip.git
@@ -117,10 +113,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
     path = bundle/vim-addon-mw-utils
     url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-    ignore = all
-[submodule "bundle/vim-snipmate"]
-    path = bundle/vim-snipmate
-    url = git://github.com/garbas/vim-snipmate.git
     ignore = all
 [submodule "bundle/vim-surround"]
     path = bundle/vim-surround
@@ -234,10 +226,6 @@
     path = bundle/ack.vim
     url = https://github.com/tyok/ack.vim
     ignore = all
-[submodule "bundle/snipmate-snippets"]
-    path = bundle/snipmate-snippets
-    url = https://github.com/honza/snipmate-snippets
-    ignore = all
 [submodule "bundle/php-cs-fixer"]
     path = bundle/php-cs-fixer
     url = https://github.com/stephpy/vim-php-cs-fixer.git
@@ -245,4 +233,12 @@
 [submodule "bundle/vim-markdown"]
     path = bundle/vim-markdown
     url = https://github.com/plasticboy/vim-markdown.git
+    ignore = all
+[submodule "bundle/git-diff"]
+	path = bundle/git-diff
+	url = https://github.com/vim-scripts/git-diff.git
+    ignore = all
+[submodule "bundle/git-cheat"]
+	path = bundle/git-cheat
+	url = https://github.com/vim-scripts/git-cheat.git
     ignore = all

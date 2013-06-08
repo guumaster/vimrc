@@ -1,6 +1,7 @@
 " ---------------------------------------------
 " Regular Vim Configuration (No Plugins Needed)
 " ---------------------------------------------
+let mapleader=","
 
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on
@@ -152,7 +153,7 @@ set t_vb=
 " Mouse
 " ---------------
 set mousehide  " Hide mouse after chars typed
-set mouse=a    " Mouse in all modes
+"set mouse=a    " Mouse in all modes
 "set ttymouse=xterm2
 
 " Better complete options to speed it up
