@@ -218,10 +218,6 @@
     path = bundle/vim-gitgutter
     url = https://github.com/airblade/vim-gitgutter.git
     ignore = all
-[submodule "bundle/Jinja"]
-    path = bundle/Jinja
-    url = https://github.com/vim-scripts/Jinja.git
-    ignore = all
 [submodule "bundle/ack.vim"]
     path = bundle/ack.vim
     url = https://github.com/tyok/ack.vim
@@ -242,3 +238,20 @@
 	path = bundle/git-cheat
 	url = https://github.com/vim-scripts/git-cheat.git
     ignore = all
+[submodule "bundle/git-vim"]
+	path = bundle/git-vim
+	url = https://github.com/motemen/git-vim.git
+    ignore = all
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = https://github.com/vim-scripts/Command-T.git
+    ignore = all
+[submodule "bundle/vim-jinja"]
+	path = bundle/vim-jinja
+	url = https://github.com/lepture/vim-jinja.git
+[submodule "bundle/powerline"]
+	path = bundle/powerline
+	url = https://github.com/Lokaltog/powerline.git
+[submodule "toggle_mouse"]
+	path = toggle_mouse
+	url = https://github.com/vim-scripts/toggle_mouse.git

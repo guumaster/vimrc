@@ -2,6 +2,7 @@
 " Regular Vim Configuration (No Plugins Needed)
 " ---------------------------------------------
 let mapleader=","
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on
@@ -152,7 +153,7 @@ set t_vb=
 " ---------------
 " Mouse
 " ---------------
-set mousehide  " Hide mouse after chars typed
+"set mousehide  " Hide mouse after chars typed
 "set mouse=a    " Mouse in all modes
 "set ttymouse=xterm2
 
