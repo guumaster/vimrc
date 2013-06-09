@@ -267,3 +267,6 @@
 	path = bundle/yamlvim
 	url = https://github.com/vim-scripts/yamlvim.git
     ignore = all
+[submodule "bundle/instant-markdown.vim"]
+	path = bundle/instant-markdown.vim
+	url = https://github.com/vim-scripts/instant-markdown.vim.git
