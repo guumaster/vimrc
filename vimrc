@@ -43,6 +43,7 @@ nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :TagbarToggle<cr>
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>. <esc>:tabnext<CR>
+let g:user_zen_leader_key = '<c-a>'
 
 set pastetoggle=<F5>
 

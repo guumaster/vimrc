@@ -131,8 +131,8 @@
     url = git://github.com/mattn/zencoding-vim.git
     ignore = all
 [submodule "bundle/zencoding-vim"]
-    path = bundle/zencoding-vim
-    url = git://github.com/mattn/zencoding-vim.git
+	path = bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim
     ignore = all
 [submodule "bundle/todo.vim"]
     path = bundle/todo.vim
@@ -263,3 +263,7 @@
 [submodule "bundle/Breeze"]
 	path = bundle/Breeze
 	url = https://github.com/gcmt/breeze.vim
+[submodule "bundle/yamlvim"]
+	path = bundle/yamlvim
+	url = https://github.com/vim-scripts/yamlvim.git
+    ignore = all
