@@ -41,3 +41,5 @@ Bundle 'Command-T'
 Bundle "lepture/vim-jinja"
 Bundle "powerline"
 Bundle "toggle_mouse"
+Bundle "Tagbar"
+Bundle "Breeze"

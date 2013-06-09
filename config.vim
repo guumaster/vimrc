@@ -3,6 +3,7 @@
 " ---------------------------------------------
 let mapleader=","
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+nmap <F8> :TagbarToggle<CR>
 
 " Automatically detect file types. (must turn on after Vundle)
 filetype plugin indent on

@@ -152,3 +152,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.twig set filetype=jinja
   
 endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2

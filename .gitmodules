@@ -252,6 +252,14 @@
 [submodule "bundle/powerline"]
 	path = bundle/powerline
 	url = https://github.com/Lokaltog/powerline.git
-[submodule "toggle_mouse"]
-	path = toggle_mouse
+[submodule "bundle/toggle_mouse"]
+	path = bundle/toggle_mouse
 	url = https://github.com/vim-scripts/toggle_mouse.git
+    ignore = all
+[submodule "bundle/Tagbar"]
+	path = bundle/Tagbar
+	url = https://github.com/vim-scripts/Tagbar.git
+    ignore = all
+[submodule "bundle/Breeze"]
+	path = bundle/Breeze
+	url = https://github.com/gcmt/breeze.vim

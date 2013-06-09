@@ -38,9 +38,45 @@ let g:snips_author = 'Gustavo Marin'
 " ---------------
 
 "explorer mappings
-nnoremap <f1> :BufExplorer<cr>
+nnoremap <f4> :BufExplorer<cr>
 nnoremap <f2> :NERDTreeToggle<cr>
 nnoremap <f3> :TagbarToggle<cr>
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>. <esc>:tabnext<CR>
+
+set pastetoggle=<F5>
+
+" use spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+
+" Make search case insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+" Disable stupid backup and swap files - they trigger too many events
+" for file system watchers
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Vim Git Gutter
+" cd ~/.vim/bundle
+" git clone https://github.com/airblade/vim-gitgutter.git
+let g:gitgutter_enabled = 0
+nmap <leader>gr :GitGutterToggle<CR>
+nmap <F6> :GitGutterToggle<CR>
+nmap <leader>s :GitGutterPrevHunk<CR>
+nmap <leader>d :GitGutterNextHunk<CR>
+
+
 
 "dont load csapprox if we no gui support - silences an annoying warning
 "if !has("gui")
