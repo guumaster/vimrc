@@ -270,3 +270,13 @@
 [submodule "bundle/instant-markdown.vim"]
 	path = bundle/instant-markdown.vim
 	url = https://github.com/vim-scripts/instant-markdown.vim.git
+[submodule "bundle/EasyMotion"]
+	path = bundle/EasyMotion
+	url = https://github.com/vim-scripts/EasyMotion.git
+[submodule "/home/guu/.vim/bundle/gundo"]
+	path = /home/guu/.vim/bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+    ignore = all
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = https://github.com/vim-scripts/Gundo.git
