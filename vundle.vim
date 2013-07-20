@@ -38,7 +38,7 @@ Bundle 'git-cheat'
 Bundle 'git-vim'
 Bundle 'Command-T'
 Bundle "lepture/vim-jinja"
-Bundle "powerline"
+Bundle 'bling/vim-airline'
 Bundle "toggle_mouse"
 Bundle "Tagbar"
 Bundle "Breeze"

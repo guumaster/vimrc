@@ -2,7 +2,7 @@
 " Regular Vim Configuration (No Plugins Needed)
 " ---------------------------------------------
 let mapleader=","
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 nmap <F8> :TagbarToggle<CR>
 
 " Automatically detect file types. (must turn on after Vundle)
@@ -173,4 +173,5 @@ let g:php_cs_fixer_fixers_list = ""             " List of fixers
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
 let g:php_cs_fixer_verbose = 1                  " Return the output of command if 1, else an inline information.
+let g:airline_powerline_fonts = 1
 

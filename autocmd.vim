@@ -21,17 +21,17 @@ if has("autocmd")
 
   "recalculate the trailing whitespace warning when idle, and after saving
   autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
-  
+
   "return '[\s]' if trailing white space is detected
   "return '' otherwise
   function! StatuslineTrailingSpaceWarning()
       if !exists("b:statusline_trailing_space_warning")
-  
+
           if !&modifiable
               let b:statusline_trailing_space_warning = ''
               return b:statusline_trailing_space_warning
           endif
-  
+
           if search('\s\+$', 'nw') != 0
               let b:statusline_trailing_space_warning = '[\s]'
           else
@@ -43,23 +43,23 @@ if has("autocmd")
 
   "recalculate the tab warning flag when idle and after writing
   autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-  
+
   "return '[&et]' if &et is set wrong
   "return '[mixed-indenting]' if spaces and tabs are used to indent
   "return an empty string if everything is fine
   function! StatuslineTabWarning()
       if !exists("b:statusline_tab_warning")
           let b:statusline_tab_warning = ''
-  
+
           if !&modifiable
               return b:statusline_tab_warning
           endif
-  
+
           let tabs = search('^\t', 'nw') != 0
-  
+
           "find spaces that arent used as alignment in the first indent column
           let spaces = search('^ \{' . &ts . ',}[^\t]', 'nw') != 0
-  
+
           if tabs && spaces
               let b:statusline_tab_warning =  '[mixed-indenting]'
           elseif (spaces && !&et) || (tabs && &et)
@@ -68,10 +68,10 @@ if has("autocmd")
       endif
       return b:statusline_tab_warning
   endfunction
-  
+
   "recalculate the long line warning when idle and after saving
   autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
-  
+
   "return a warning for "long lines" where "long" is either &textwidth or 80 (if
   "no &textwidth is set)
   "
@@ -81,14 +81,14 @@ if has("autocmd")
   "longest line
   function! StatuslineLongLineWarning()
       if !exists("b:statusline_long_line_warning")
-  
+
           if !&modifiable
               let b:statusline_long_line_warning = ''
               return b:statusline_long_line_warning
           endif
-  
+
           let long_line_lens = s:LongLines()
-  
+
           if len(long_line_lens) > 0
               let b:statusline_long_line_warning = "[" .
                           \ '#' . len(long_line_lens) . "," .
@@ -100,7 +100,7 @@ if has("autocmd")
       endif
       return b:statusline_long_line_warning
   endfunction
-  
+
   "return a list containing the lengths of the long lines in this buffer
   function! s:LongLines()
       let threshold = (&tw ? &tw : 80)
@@ -120,10 +120,10 @@ if has("autocmd")
           endif
       end
   endfunction
-  
+
   "spell check when writing commit logs
   autocmd filetype svn,*commit* setlocal spell
-  
+
   "http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
   "hacks from above (the url, not jesus) to delete fugitive buffers when we
   "leave them - otherwise the buffer list gets poluted
@@ -139,7 +139,7 @@ if has("autocmd")
   function! s:Median(nums)
       let nums = sort(a:nums)
       let l = len(nums)
-  
+
       if l % 2 == 1
           let i = (l-1) / 2
           return nums[i]
@@ -150,8 +150,26 @@ if has("autocmd")
 
  " au BufNewFile,BufRead *.twig set filetype=html
   au BufNewFile,BufRead *.twig set filetype=jinja
-  
+
 endif
+
+
+" Function to remove trailing whitespaces on save
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+" Autoremove trailing whitespaces on save
+autocmd BufWritePre *.html,*.php,*.js :call <SID>StripTrailingWhitespaces()
+
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
