@@ -174,3 +174,6 @@ autocmd BufWritePre *.html,*.php,*.js :call <SID>StripTrailingWhitespaces()
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+
+autocmd BufWritePre *.js :%s/\s\+$//e
